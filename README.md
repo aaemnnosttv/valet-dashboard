@@ -2,7 +2,7 @@
 
 A simple dashboard for Laravel Valet to display all available sites.
 
-![image](https://user-images.githubusercontent.com/1621608/44816275-79dca380-abea-11e8-83cc-38f19d11fb25.png)
+![image](https://user-images.githubusercontent.com/1621608/44817886-a515c180-abef-11e8-9126-9e0678283a9e.png)
 
 A super minimal dashboard which lists each available site for all parked paths as well as Valet-linked sites.
 

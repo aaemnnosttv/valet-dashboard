@@ -23,7 +23,7 @@ $tld = $valet_config->tld ?: $valet_config->domain;
                     <code class="font-mono text-grey-dark"><?= $parked_path ?></code>
                     <ul>
                         <?php foreach (array_diff(scandir($parked_path), ['.','..']) as $site) : ?>
-                            <?php if (is_dir("$parked_path/$site") || is_link("$parked_path/$site")) : ?>
+                            <?php if ((is_dir("$parked_path/$site") || is_link("$parked_path/$site")) && $site[0] != '.') : ?>
                             <li><a href="http://<?= "$site.$tld" ?>/" target="<?= "valet_$site" ?>"
                                 class="text-blue hover:text-blue-light no-underline hover:underline"><?= "$site.$tld" ?></a></li>
                             <?php endif ?>

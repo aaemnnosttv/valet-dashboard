@@ -3,7 +3,7 @@ $valet_xdg_home = getenv('HOME') . '/.config/valet';
 $valet_old_home = getenv('HOME') . '/.valet';
 $valet_home_path = is_dir($valet_xdg_home) ? $valet_xdg_home : $valet_old_home;
 $valet_config = json_decode(file_get_contents("$valet_home_path/config.json"));
-$tld = $valet_config->tld ?: $valet_config->domain;
+$tld = isset($valet_config->tld) ? $valet_config->tld : $valet_config->domain;
 ?>
 <html>
     <head>

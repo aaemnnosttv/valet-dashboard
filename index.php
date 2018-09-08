@@ -20,7 +20,7 @@ $tld = isset($valet_config->tld) ? $valet_config->tld : $valet_config->domain;
         <div class="grid">
             <?php foreach ($valet_config->paths as $parked_path) : ?>
                 <div class="leading-normal whitespace-no-wrap">
-                    <code class="font-mono text-grey-dark"><?= $parked_path ?></code>
+                    <code class="font-mono text-grey-dark"><?= str_replace(getenv('HOME'), '~', $parked_path) ?></code>
                     <ul>
                         <?php foreach (scandir($parked_path) as $site) : ?>
                             <?php if ((is_dir("$parked_path/$site") || is_link("$parked_path/$site")) && $site[0] != '.') : ?>

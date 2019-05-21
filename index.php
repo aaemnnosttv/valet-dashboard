@@ -7,7 +7,7 @@ $tld = isset($valet_config->tld) ? $valet_config->tld : $valet_config->domain;
 ?>
 <html>
     <head>
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
         <style>
             .grid {
                 display: grid;

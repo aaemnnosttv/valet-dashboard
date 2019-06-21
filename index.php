@@ -7,6 +7,7 @@ $tld = isset($valet_config->tld) ? $valet_config->tld : $valet_config->domain;
 $self = isset($valet_config->default) ? basename($valet_config->default) : 'valet-dashboard';
 ?>
 <html>
+    <title>Valet Dashboard</title>
     <head>
         <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
         <style>

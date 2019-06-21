@@ -2,7 +2,7 @@
 
 A simple dashboard for Laravel Valet to display all available sites.
 
-![image](https://user-images.githubusercontent.com/1621608/44817886-a515c180-abef-11e8-9126-9e0678283a9e.png)
+![image](preview.png)
 
 A super minimal dashboard which lists each available site for all parked paths as well as Valet-linked sites.
 
@@ -12,3 +12,19 @@ A super minimal dashboard which lists each available site for all parked paths a
 E.g. `git clone https://github.com/aaemnnosttv/valet-dashboard.git dashboard`
 1. Move the new directory into a Valet-parked path or run `valet link` within it
 1. Run `valet open` from within the directory!
+
+## Setup as default site
+If you would like to access your dashboard by going to http://localhost,
+you have to adjust the Valet config under `~/config/valet/config.json`.
+
+Add the "default" key, like this:
+```json
+{
+    "domain": "dev",
+    "paths": [
+        "/Users/yourname/yourpath"
+    ],
+    "default": "/Users/yourname/yourpath/valet-dashboard",
+    "tld": "test"
+}
+```

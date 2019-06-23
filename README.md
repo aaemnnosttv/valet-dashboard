@@ -13,18 +13,16 @@ E.g. `git clone https://github.com/aaemnnosttv/valet-dashboard.git dashboard`
 1. Move the new directory into a Valet-parked path or run `valet link` within it
 1. Run `valet open` from within the directory!
 
-## Setup as default site
-If you would like to access your dashboard by going to http://localhost,
-you have to adjust the Valet config under `~/config/valet/config.json`.
+## Configure as default site (optional)
 
-Add the "default" key, like this:
-```json
+If you would like to access your dashboard at http://localhost, simply define the path to your local valet dashboard in as the `default` in your Valet config file.
+
+> Newer installations of Valet put the `config.json` in `~/.config/valet/` while older installations may use `~/.valet/`
+
+```diff
 {
-    "domain": "dev",
-    "paths": [
-        "/Users/yourname/yourpath"
-    ],
-    "default": "/Users/yourname/yourpath/valet-dashboard",
++   "default": "/absolute/path/to/valet-dashboard",
+    "paths": [],
     "tld": "test"
 }
 ```

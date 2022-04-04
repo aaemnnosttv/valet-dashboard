@@ -8,19 +8,12 @@ $tld = isset($valet_config->tld) ? $valet_config->tld : $valet_config->domain;
 <html>
     <title>Valet Dashboard</title>
     <head>
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-        <style>
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                justify-items: center;
-            }
-        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="m-12 font-sans">
-        <div class="grid">
+    <body class="m-8 font-sans">
+        <div class="grid sm:grid-cols-[repeat(auto-fit,minmax(280px,1fr))] sm:justify-items-center">
             <?php foreach ($valet_config->paths as $parked_path) : ?>
-                <div class="leading-normal whitespace-no-wrap">
+                <div class="leading-normal whitespace-no-wrap m-2">
                     <code class="font-mono text-gray-600"><?= str_replace(getenv('HOME'), '~', $parked_path) ?></code>
                     <ul class="list-disc pl-4">
                         <?php foreach (scandir($parked_path) as $site) : ?>

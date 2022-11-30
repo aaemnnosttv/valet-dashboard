@@ -21,7 +21,7 @@ If you would like to access your dashboard at http://localhost, simply define th
 
 ```diff
 {
-+   "default": "/absolute/path/to/valet-dashboard",
++   "default": "/absolute/path/to/dashboard",
     "paths": [],
     "tld": "test"
 }
